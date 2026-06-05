@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Patong Beach Phuket | Prime Corner Plot Investment</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#0a0d14;
+    --card:#111827;
+    --card2:#151d2d;
+    --gold:#d6b36a;
+    --gold2:#f3d28f;
+    --white:#ffffff;
+    --muted:#b4bcc9;
+    --green:#4ade80;
+    --blue:#60a5fa;
+    --red:#f87171;
+    --line:rgba(255,255,255,0.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:linear-gradient(180deg,#05070d 0%,#0d1320 100%);
+    color:var(--white);
+    overflow-x:hidden;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+.container{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+    padding:24px;
+}
+
+.hero{
+    position:relative;
+    min-height:100vh;
+    border-radius:32px;
+    overflow:hidden;
+    background:
+    linear-gradient(rgba(0,0,0,0.45),rgba(0,0,0,0.75)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1600&auto=format&fit=crop');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:flex-end;
+    padding:60px;
+    margin-bottom:40px;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    padding:10px 18px;
+    border-radius:999px;
+    background:rgba(214,179,106,0.12);
+    border:1px solid rgba(214,179,106,0.35);
+    color:var(--gold2);
+    font-size:13px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    margin-bottom:24px;
+    font-weight:700;
+}
+
+.hero h1{
+    font-size:clamp(38px,6vw,88px);
+    line-height:1.02;
+    font-weight:900;
+    margin-bottom:22px;
+}
+
+.hero p{
+    color:#d6dce7;
+    font-size:18px;
+    line-height:1.8;
+    max-width:760px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:24px;
+    margin-bottom:40px;
+}
+
+.card{
+    background:linear-gradient(180deg,var(--card),var(--card2));
+    border-radius:24px;
+    padding:28px;
+    border:1px solid var(--line);
+    box-shadow:0 20px 40px rgba(0,0,0,0.35);
+}
+
+.metric{
+    font-size:46px;
+    font-weight:900;
+    margin-top:14px;
+    color:var(--gold2);
+}
+
+.label{
+    color:var(--muted);
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.section{
+    margin-bottom:40px;
+}
+
+.section-title{
+    font-size:42px;
+    font-weight:900;
+    margin-bottom:18px;
+}
+
+.section-sub{
+    color:var(--muted);
+    line-height:1.8;
+    margin-bottom:30px;
+    max-width:1000px;
+}
+
+.two-col{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+}
+
+.highlight{
+    color:var(--gold2);
+    font-weight:700;
+}
+
+ul.custom{
+    list-style:none;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+ul.custom li{
+    position:relative;
+    padding-left:28px;
+    color:#d5dbe6;
+    line-height:1.7;
+}
+
+ul.custom li::before{
+    content:"◆";
+    position:absolute;
+    left:0;
+    top:0;
+    color:var(--gold2);
+}
+
+.table-wrapper{
+    overflow-x:auto;
+    width:100%;
+    -webkit-overflow-scrolling:touch;
+    border-radius:24px;
+}
+
+table{
+    width:100%;
+    min-width:900px;
+    border-collapse:collapse;
+    background:linear-gradient(180deg,#111827,#0f172a);
+    border-radius:24px;
+    overflow:hidden;
+}
+
+thead{
+    background:rgba(214,179,106,0.12);
+}
+
+th,td{
+    padding:22px;
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    text-align:left;
+    vertical-align:middle;
+}
+
+th{
+    color:var(--gold2);
+    font-size:14px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+td{
+    color:#d9dee7;
+    font-size:15px;
+}
+
+.green{
+    color:var(--green);
+    font-weight:700;
+}
+
+.blue{
+    color:var(--blue);
+    font-weight:700;
+}
+
+.red{
+    color:var(--red);
+    font-weight:700;
+}
+
+.quote-box{
+    background:linear-gradient(135deg,#181f31,#0f1728);
+    border:1px solid rgba(214,179,106,0.18);
+    border-radius:28px;
+    padding:40px;
+}
+
+.quote{
+    font-size:28px;
+    line-height:1.5;
+    font-weight:700;
+}
+
+.footer{
+    padding:60px 20px 80px;
+    text-align:center;
+    color:#95a0b2;
+}
+
+.cta{
+    margin-top:24px;
+    display:inline-flex;
+    padding:18px 34px;
+    border-radius:16px;
+    background:linear-gradient(135deg,#d6b36a,#f3d28f);
+    color:#111827;
+    font-weight:800;
+    text-decoration:none;
+    transition:0.3s ease;
+}
+
+.cta:hover{
+    transform:translateY(-2px);
+}
+
+.divider{
+    height:1px;
+    background:rgba(255,255,255,0.08);
+    margin:50px 0;
+}
+
+.image-banner{
+    border-radius:28px;
+    overflow:hidden;
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.image-banner img{
+    height:520px;
+    object-fit:cover;
+}
+
+@media(max-width:1100px){
+
+    .grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .two-col{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:40px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .container{
+        padding:16px;
+    }
+
+    .hero{
+        padding:28px;
+        border-radius:24px;
+    }
+
+    .hero h1{
+        font-size:42px;
+        line-height:1.1;
+    }
+
+    .hero p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .card{
+        padding:22px;
+    }
+
+    .metric{
+        font-size:38px;
+    }
+
+    .section-title{
+        font-size:32px;
+        line-height:1.15;
+    }
+
+    .quote{
+        font-size:22px;
+    }
+
+    th,td{
+        padding:18px;
+        font-size:14px;
+        vertical-align:top;
+    }
+
+    .image-banner img{
+        height:320px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                Exclusive Institutional Grade Opportunity • Phuket Thailand
+            </div>
+
+            <h1>
+                Prime Corner Plot <br>
+                Patong Beach Phuket
+            </h1>
+
+            <p>
+                A rare 5 Rai beachfront corridor acquisition opportunity positioned in one of Southeast Asia’s highest-performing tourism destinations. Strategically surrounded by global luxury hospitality brands and offering exceptional dual-road frontage, this asset presents a compelling platform for transformational mixed-use or luxury hospitality development with strong capital appreciation potential.
+            </p>
+
+        </div>
+
+    </section>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="label">Land Size</div>
+            <div class="metric">5 Rai</div>
+        </div>
+
+        <div class="card">
+            <div class="label">Total Land Area</div>
+            <div class="metric">8,000 sqm</div>
+        </div>
+
+        <div class="card">
+            <div class="label">Asking Price</div>
+            <div class="metric">฿500M</div>
+        </div>
+
+        <div class="card">
+            <div class="label">Frontage</div>
+            <div class="metric">114m x 70m</div>
+        </div>
+
+    </div>
+
+    <section class="section">
+
+        <div class="section-title">
+            Strategic Investment Thesis
+        </div>
+
+        <div class="section-sub">
+            Phuket continues to outperform regional tourism-driven markets due to constrained premium beachfront land supply, resilient luxury tourism demand, expanding aviation infrastructure, and increasing international branded residence absorption.
+        </div>
+
+        <div class="two-col">
+
+            <div class="card">
+
+                <ul class="custom">
+
+                    <li>
+                        Positioned directly on <span class="highlight">Sirirat Road, Patong Beach</span>, one of Phuket’s most recognizable tourism corridors.
+                    </li>
+
+                    <li>
+                        Surrounded by internationally recognized luxury hospitality brands including Amari Phuket, Rosewood Phuket, Phuket Marriott Resort, and Le Méridien Phuket.
+                    </li>
+
+                    <li>
+                        Exceptional visibility and access via dual road frontage creates superior master-planning flexibility.
+                    </li>
+
+                    <li>
+                        High scarcity value due to limited remaining large-scale developable plots within Patong Beach.
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <ul class="custom">
+
+                    <li>
+                        Suitable for branded residences, wellness resorts, ultra-luxury villas, boutique lifestyle hotels, or mixed-use hospitality ecosystems.
+                    </li>
+
+                    <li>
+                        Strong tourism recovery and continued premium ADR growth support attractive development economics.
+                    </li>
+
+                    <li>
+                        Institutional investors continue consolidating luxury Phuket assets due to long-term global tourism positioning.
+                    </li>
+
+                    <li>
+                        Strong exit optionality through strata sales, hospitality stabilization, REIT conversion, or portfolio acquisition.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+
+        <div class="section-title">
+            Potential Development Concepts
+        </div>
+
+        <div class="two-col">
+
+            <div class="card">
+
+                <h3 style="margin-bottom:18px;font-size:24px;">Luxury Hospitality Resort</h3>
+
+                <p style="color:#cdd5e0;line-height:1.9;">
+                    Ultra-luxury 150–220 key lifestyle resort targeting affluent international travelers, wellness tourism, and experiential hospitality segments.
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3 style="margin-bottom:18px;font-size:24px;">Branded Residences</h3>
+
+                <p style="color:#cdd5e0;line-height:1.9;">
+                    High-margin branded residential development with premium sea-view units and integrated wellness offerings targeting UHNW buyers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="image-banner">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1600&auto=format&fit=crop">
+    </div>
+
+    <div class="divider"></div>
+
+    <section class="section">
+
+        <div class="section-title">
+            Institutional Financial Projection
+        </div>
+
+        <div class="section-sub">
+            Illustrative development economics assuming a luxury mixed-use hospitality strategy with stabilization over a 5–7 year investment horizon.
+        </div>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Investment Metric</th>
+                        <th>Base Case</th>
+                        <th>Upside Scenario</th>
+                        <th>Institutional Benchmark</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Total Acquisition Cost</td>
+                        <td>฿500M</td>
+                        <td>฿500M</td>
+                        <td>Prime Phuket Benchmark</td>
+                    </tr>
+
+                    <tr>
+                        <td>Total Development Cost</td>
+                        <td>฿2.1B</td>
+                        <td>฿2.5B</td>
+                        <td>Luxury Grade Development</td>
+                    </tr>
+
+                    <tr>
+                        <td>Projected Stabilized Value</td>
+                        <td class="green">฿4.6B</td>
+                        <td class="green">฿6.1B</td>
+                        <td>Institutional Exit Pricing</td>
+                    </tr>
+
+                    <tr>
+                        <td>Projected ROIC</td>
+                        <td class="green">72%</td>
+                        <td class="green">104%</td>
+                        <td>Above Market Average</td>
+                    </tr>
+
+                    <tr>
+                        <td>Projected IRR</td>
+                        <td class="green">18.5%</td>
+                        <td class="green">24.8%</td>
+                        <td>Institutional Grade Return</td>
+                    </tr>
+
+                    <tr>
+                        <td>Projected MOIC</td>
+                        <td class="green">1.72x</td>
+                        <td class="green">2.04x</td>
+                        <td>Strong Equity Multiple</td>
+                    </tr>
+
+                    <tr>
+                        <td>Estimated Exit Horizon</td>
+                        <td>5–7 Years</td>
+                        <td>5–8 Years</td>
+                        <td>Hospitality Asset Cycle</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+
+        <div class="quote-box">
+
+            <div class="quote">
+                “This is not merely a land acquisition. It is a strategic control position within Phuket’s luxury tourism ecosystem — where scarcity, branding, and international demand converge to create exceptional long-term value creation potential.”
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+
+        <div class="section-title">
+            Competitive Positioning Advantage
+        </div>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Factor</th>
+                        <th>Subject Asset</th>
+                        <th>Competing Assets</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Land Scale</td>
+                        <td class="green">Large Institutional Scale</td>
+                        <td>Fragmented Parcels</td>
+                    </tr>
+
+                    <tr>
+                        <td>Road Frontage</td>
+                        <td class="green">Dual Frontage</td>
+                        <td>Limited Access</td>
+                    </tr>
+
+                    <tr>
+                        <td>Luxury Adjacency</td>
+                        <td class="green">World-Class Hospitality Cluster</td>
+                        <td>Mixed Quality Areas</td>
+                    </tr>
+
+                    <tr>
+                        <td>Development Flexibility</td>
+                        <td class="green">Mixed-Use Potential</td>
+                        <td>Restricted Configurations</td>
+                    </tr>
+
+                    <tr>
+                        <td>Exit Liquidity</td>
+                        <td class="green">Institutional Appeal</td>
+                        <td>Lower Global Demand</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+
+        <div class="section-title">
+            Exit Strategy Value Creation
+        </div>
+
+        <div class="two-col">
+
+            <div class="card">
+
+                <h3 style="margin-bottom:20px;font-size:24px;">
+                    Primary Exit Strategies
+                </h3>
+
+                <ul class="custom">
+
+                    <li>Sale to institutional hospitality fund</li>
+
+                    <li>Branded residence strata monetization</li>
+
+                    <li>International hotel operator acquisition</li>
+
+                    <li>Hospitality REIT recapitalization</li>
+
+                    <li>Family office portfolio acquisition</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3 style="margin-bottom:20px;font-size:24px;">
+                    Core Value Drivers
+                </h3>
+
+                <ul class="custom">
+
+                    <li>Luxury tourism growth trajectory</li>
+
+                    <li>Premium land scarcity in Patong</li>
+
+                    <li>International brand partnership leverage</li>
+
+                    <li>Rising ADR and occupancy rates</li>
+
+                    <li>Foreign capital inflow into Phuket</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="section">
+
+        <div class="section-title">
+            Executive Conclusion
+        </div>
+
+        <div class="section-sub">
+
+            This acquisition represents a rare opportunity to secure a large-scale strategic landholding in Phuket’s premier tourism market. The combination of location, frontage, development flexibility, luxury adjacency, and long-term tourism fundamentals creates a highly compelling institutional investment case with strong downside protection and exceptional upside potential.
+
+        </div>
+
+        <a href="#" class="cta">
+            Arrange Private Investment Discussion
+        </a>
+
+    </section>
+
+    <div class="footer">
+
+        Confidential Investor Presentation • Prime Patong Beach Development Opportunity • Phuket Thailand
+
+    </div>
+
+</div>
+
+</body>
+</html>
